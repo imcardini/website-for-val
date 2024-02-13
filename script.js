@@ -1,43 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let slider = document.querySelector('.slider');
-    let isDragging = false;
-    let startPosition = 0;
-    let endPosition = 0;
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+let slider = document.querySelector('.slider');
 
-    slider.addEventListener('mousedown', function(event) {
-        isDragging = true;
-        startPosition = event.clientX;
-    });
+next.addEventListener('click', function () {
+    let firstItem = slider.querySelector('.item');
+    let clonedItem = firstItem.cloneNode(true); // Clone the first item
+    slider.appendChild(clonedItem); // Add the cloned item to the end
+    slider.removeChild(firstItem); // Remove the original first item
+});
 
-    slider.addEventListener('mousemove', function(event) {
-        if (isDragging) {
-            endPosition = event.clientX;
-        }
-    });
-
-    slider.addEventListener('mouseup', function() {
-        if (isDragging) {
-            isDragging = false;
-            let distance = endPosition - startPosition;
-            if (Math.abs(distance) > 50) {
-                if (distance > 0) {
-                    moveToPrevSlide();
-                } else {
-                    moveToNextSlide();
-                }
-            }
-        }
-    });
-
-    // Function to move to the next slide
-    function moveToNextSlide() {
-        let items = document.querySelectorAll('.item');
-        slider.appendChild(items[0]);
-    }
-
-    // Function to move to the previous slide
-    function moveToPrevSlide() {
-        let items = document.querySelectorAll('.item');
-        slider.prepend(items[items.length - 1]);
-    }
+prev.addEventListener('click', function () {
+    let lastItem = slider.querySelector('.item:last-child');
+    let clonedItem = lastItem.cloneNode(true); // Clone the last item
+    slider.insertBefore(clonedItem, slider.firstChild); // Add the cloned item to the beginning
+    slider.removeChild(lastItem); // Remove the original last item
 });
