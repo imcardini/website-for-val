@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heartContainer">
+            <div class="heart">
+                <img src="./img/elf.jpg" style="width: 300px;" alt="">
+            </div>
+        </div>
+        <button id="heartButton">want to see an elf ?</button>
+        <button id="secondButton" style="display: none; z-index: 1000; position: absolute; bottom: 10%; font-size: 1rem;"><a href="./index/index.html" style="color: white; text-decoration: none;" >😂😂 Just kidding the real elf is this way ➡️</a></button>
+    </div>
+    <script>
+        document.getElementById('heartButton').addEventListener('click', function() {
+            const heart = document.querySelector('.heart');
+            heart.classList.add('pop');
+            setTimeout(() => {
+                heart.classList.remove('pop');
+                document.getElementById('secondButton').style.display = 'block'; // Show the second button
+            }, 1500); // Adjust the duration of the "pop" effect (in milliseconds)
+        });
+    </script>
+</body>
+</html>
