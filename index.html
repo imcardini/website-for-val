@@ -10,10 +10,13 @@
     <div class="container">
         <div class="heartContainer">
             <div class="heart">
-                <img src="./img/elf.jpg" style="width: 300px;" alt="">
+                <video autoplay muted loop id="bgVideo">
+                    <source src="./img/1.mp4" type="video/mp4">
+                  
+                </video>
             </div>
         </div>
-        <button id="heartButton">want to see an elf ?</button>
+        <button id="heartButton">want to see an elf ? click me </button>
         <button id="secondButton" style="display: none; z-index: 1000; position: absolute; bottom: 10%; font-size: 1rem;"><a href="./index/indexx.html" style="color: white; text-decoration: none;" >😂😂 Just kidding the real elf is this way ➡️</a></button>
     </div>
     <script>
@@ -23,7 +26,7 @@
             setTimeout(() => {
                 heart.classList.remove('pop');
                 document.getElementById('secondButton').style.display = 'block'; // Show the second button
-            }, 1500); // Adjust the duration of the "pop" effect (in milliseconds)
+            }, 3500); // Adjust the duration of the "pop" effect (in milliseconds)
         });
     </script>
 </body>
