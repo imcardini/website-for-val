@@ -219,7 +219,7 @@ body {
 
     .slider .item:nth-child(4) {
         top: 27rem;
-        left: calc(0% + 205px);
+        left: calc(1% + 205px);
         max-width: 100px;
         max-height: 100px;
     }
