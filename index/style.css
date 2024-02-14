@@ -30,23 +30,23 @@ body {
 }
 
 .i1 {
-    background-image: url(./img/redah/1.jpg);
+    background-image: url(/img/redah/1.jpg);
 }
 
 .i2 {
-    background-image: url(./img/redah/2.webp);
+    background-image: url(/img/redah/2.webp);
 }
 
 .i3 {
-    background-image: url(./img/redah/3.jpg);
+    background-image: url(/img/redah/3.jpg);
 }
 
 .i4 {
-    background-image: url(./img/redah/4.jpg);
+    background-image: url(/img/redah/4.jpg);
 }
 
 .i5 {
-    background-image: url(./img/redah/5.jpg);
+    background-image: url(/img/redah/5.jpg);
 }
 
 
